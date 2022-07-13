@@ -6,5 +6,6 @@ export class Course{
     price: number = 0;
     duration: number = 0;
     rating: number = 0;
-    releaseDate: string = '';
+    releaseDate: String = '';
+    description: String = '';
 }
