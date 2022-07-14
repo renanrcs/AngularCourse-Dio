@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CourseListComponent } from './courses/course-list.component';
 import { StarComponent } from './star/star.component';
 import { RouterModule } from '@angular/router';
+import { CourseInfoComponent } from './courses/couse-info.component';
 
 @NgModule({
   declarations: [
@@ -17,17 +18,21 @@ import { RouterModule } from '@angular/router';
     StarComponent,
     ReplacePipe,
     NavBarComponent,
-    Error404Component
+    Error404Component,
+    CourseInfoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       {
-        path: '', redirectTo: 'courses', pathMatch: 'full'
+        path: 'courses', component: CourseListComponent
       },
       {
-        path: 'courses', component: CourseListComponent
+        path: 'courses/info/:id', component: CourseInfoComponent
+      },
+      {
+        path: '', redirectTo: 'courses', pathMatch: 'full'
       },
       {
         path: '**', component: Error404Component
