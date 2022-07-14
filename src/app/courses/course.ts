@@ -1,11 +1,11 @@
 export class Course{
     id: number = 0;
-    name: String = '';
-    imageUrl: String = '';
-    code: String = '';
+    name: string = '';
+    imageUrl: string = '';
+    code: string = '';
     price: number = 0;
     duration: number = 0;
     rating: number = 0;
-    releaseDate: String = '';
-    description: String = '';
+    releaseDate: string = '';
+    description: string = '';
 }
